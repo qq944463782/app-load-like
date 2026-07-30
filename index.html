@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="LocalLink — local discovery, chat and file transfer across iOS, Android, macOS and Windows." />
+  <title>LocalLink · 本地快连</title>
+  <link rel="icon" href="./assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Noto+Sans+SC:wght@400;600;700&family=Noto+Sans+TC:wght@400;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="brand" href="./">
+        <img src="./assets/logo.png" alt="" width="36" height="36" />
+        <span>
+          <span data-i18n="brand">LocalLink</span>
+          <span data-i18n="brandSub" style="opacity:.7;font-weight:600;margin-left:.35rem"></span>
+        </span>
+      </a>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="zh-CN" aria-pressed="true">简中</button>
+        <button type="button" data-lang="zh-Hant" aria-pressed="false">繁中</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow" data-i18n="eyebrow">局域网 · 蓝牙 · 零上云</div>
+            <h1><span data-i18n="heroTitle">四端互通，文件秒传</span></h1>
+            <p class="lead" data-i18n="heroLead">
+              在 iOS、Android、macOS、Windows 之间本地发现、聊天与传文件。数据留在你的设备，不经过我们的服务器。
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#download" data-i18n="ctaDownload">选择平台下载</a>
+              <a class="btn btn-ghost" href="./privacy.html" data-i18n="ctaPrivacy">隐私政策</a>
+            </div>
+          </div>
+          <div class="hero-visual" aria-hidden="true">
+            <div class="orb"></div>
+            <img class="logo" src="./assets/logo.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="download">
+        <div class="section-head">
+          <h2 data-i18n="platformsTitle">下载 LocalLink</h2>
+          <p data-i18n="platformsLead">商店链接就绪后会自动显示；也可先使用安装包。</p>
+          <p id="version" style="margin-top:.4rem;color:var(--cyan);font-weight:700;font-size:.9rem"></p>
+        </div>
+        <div class="platforms" id="platforms"></div>
+
+        <div class="features">
+          <article class="feature">
+            <h3 data-i18n="feat1Title">局域网发现</h3>
+            <p data-i18n="feat1Body">同一 Wi‑Fi / 热点下自动发现附近设备，一键开聊。</p>
+          </article>
+          <article class="feature">
+            <h3 data-i18n="feat2Title">蓝牙补位</h3>
+            <p data-i18n="feat2Body">无公网、弱 Wi‑Fi 时也能用 BLE 发现并传输。</p>
+          </article>
+          <article class="feature">
+            <h3 data-i18n="feat3Title">隐私本地</h3>
+            <p data-i18n="feat3Body">聊天与文件走设备间直连，不上云、不留档。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div data-i18n="footerCopy">© LocalLink · wbox.top</div>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap">
+        <a href="https://www.wbox.top" target="_blank" rel="noopener" data-i18n="footerOfficial">官网</a>
+        <a href="./privacy.html" data-i18n="footerPrivacy">隐私政策</a>
+        <a href="https://loadlink.wbox.top" target="_blank" rel="noopener">loadlink.wbox.top</a>
+      </div>
+    </footer>
+  </div>
+  <script src="./i18n.js"></script>
+</body>
+</html>

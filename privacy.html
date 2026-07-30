@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy · LocalLink</title>
+  <link rel="icon" href="./assets/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Noto+Sans+SC:wght@400;600;700&family=Noto+Sans+TC:wght@400;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <style>
+    .doc { max-width: 720px; margin: 0 auto; padding: 1.5rem 0 3rem; }
+    .doc h1 { font-family: var(--font-display); font-size: 1.8rem; margin: 0 0 1rem; }
+    .doc h2 { font-family: var(--font-display); font-size: 1.15rem; margin: 1.6rem 0 .6rem; }
+    .doc p, .doc li { color: var(--muted); line-height: 1.7; }
+    .doc ul { padding-left: 1.2rem; }
+    .back { display:inline-block; margin: 1.2rem 0 0; color: var(--cyan); font-weight: 700; }
+    .lang-inline { margin: 0 0 1rem; display:flex; gap:.5rem; flex-wrap:wrap; }
+    .lang-inline button { appearance:none; border:1px solid var(--line); background:rgba(255,255,255,.04); color:var(--muted); border-radius:999px; padding:.35rem .75rem; cursor:pointer; font-weight:600; }
+    .lang-inline button[aria-pressed="true"] { color:var(--ink); border-color: rgba(62,203,255,.5); }
+    .pane { display:none; }
+    .pane.active { display:block; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="./">← LocalLink</a>
+    <div class="doc">
+      <div class="lang-inline" role="group" aria-label="Language">
+        <button type="button" data-pane="zh-CN" aria-pressed="true">简中</button>
+        <button type="button" data-pane="zh-Hant" aria-pressed="false">繁中</button>
+        <button type="button" data-pane="en" aria-pressed="false">EN</button>
+      </div>
+
+      <section class="pane active" id="zh-CN">
+        <h1>隐私政策</h1>
+        <p>更新日期：2026-07-30</p>
+        <p>LocalLink（本地快连）是一款在同一局域网或蓝牙范围内进行设备发现、聊天与文件传输的应用。本政策说明我们如何处理与隐私相关的信息。</p>
+        <h2>1. 我们收集什么</h2>
+        <p>核心功能在设备本地完成。我们<strong>不会</strong>运营用于存储你聊天内容或传输文件的云端服务器。</p>
+        <ul>
+          <li>设备显示名称、本地 IP / 端口、设备标识（用于发现与连接）仅在附近设备间交换。</li>
+          <li>聊天消息与文件通过设备间直连传输，默认不上传到我们的服务器。</li>
+          <li>应用可能请求相机（扫码）、蓝牙、附近设备、定位（部分系统用于本地发现）、通知、悬浮窗等权限——仅用于对应功能。</li>
+        </ul>
+        <h2>2. 数据用途</h2>
+        <p>上述信息仅用于本机发现、建立连接、展示会话与完成传输，不用于广告画像。</p>
+        <h2>3. 第三方</h2>
+        <p>若你通过应用商店下载，商店可能按其政策收集安装与诊断信息；那不属于 LocalLink 服务器收集。</p>
+        <h2>4. 联系我们</h2>
+        <p>官网：<a href="https://www.wbox.top">www.wbox.top</a> · 下载页：<a href="https://loadlink.wbox.top">loadlink.wbox.top</a></p>
+      </section>
+
+      <section class="pane" id="zh-Hant">
+        <h1>隱私政策</h1>
+        <p>更新日期：2026-07-30</p>
+        <p>LocalLink（本地快連）是一款在同一區域網路或藍牙範圍內進行裝置發現、聊天與檔案傳輸的應用。本政策說明我們如何處理與隱私相關的資訊。</p>
+        <h2>1. 我們收集什麼</h2>
+        <p>核心功能在裝置本機完成。我們<strong>不會</strong>營運用於儲存你聊天內容或傳輸檔案的雲端伺服器。</p>
+        <ul>
+          <li>裝置顯示名稱、本機 IP / 連接埠、裝置識別（用於發現與連線）僅在附近裝置間交換。</li>
+          <li>聊天訊息與檔案透過裝置間直連傳輸，預設不上傳到我們的伺服器。</li>
+          <li>應用可能請求相機（掃碼）、藍牙、附近裝置、定位（部分系統用於本機發現）、通知、懸浮窗等權限——僅用於對應功能。</li>
+        </ul>
+        <h2>2. 資料用途</h2>
+        <p>上述資訊僅用於本機發現、建立連線、展示會話與完成傳輸，不用於廣告畫像。</p>
+        <h2>3. 第三方</h2>
+        <p>若你透過應用商店下載，商店可能依其政策收集安裝與診斷資訊；那不屬於 LocalLink 伺服器收集。</p>
+        <h2>4. 聯絡我們</h2>
+        <p>官網：<a href="https://www.wbox.top">www.wbox.top</a> · 下載頁：<a href="https://loadlink.wbox.top">loadlink.wbox.top</a></p>
+      </section>
+
+      <section class="pane" id="en">
+        <h1>Privacy Policy</h1>
+        <p>Last updated: 2026-07-30</p>
+        <p>LocalLink helps nearby devices discover each other, chat, and transfer files over LAN or Bluetooth. This policy explains how privacy-related information is handled.</p>
+        <h2>1. What we collect</h2>
+        <p>Core features run on your devices. We do <strong>not</strong> operate a cloud backend that stores your chats or transferred files.</p>
+        <ul>
+          <li>Device display name, local IP/port, and device identifiers used for discovery/connection are exchanged between nearby devices.</li>
+          <li>Messages and files are transferred peer-to-peer and are not uploaded to our servers by default.</li>
+          <li>The app may request Camera (QR), Bluetooth, Nearby devices, Location (on some OS versions for local discovery), Notifications, and Overlay — only for those features.</li>
+        </ul>
+        <h2>2. How we use information</h2>
+        <p>Information is used only to discover peers, connect, show conversations, and complete transfers — not for advertising profiles.</p>
+        <h2>3. Third parties</h2>
+        <p>If you install via an app store, that store may collect install/diagnostic data under its own policy. That is not LocalLink server collection.</p>
+        <h2>4. Contact</h2>
+        <p>Website: <a href="https://www.wbox.top">www.wbox.top</a> · Downloads: <a href="https://loadlink.wbox.top">loadlink.wbox.top</a></p>
+      </section>
+    </div>
+  </div>
+  <script>
+    const buttons = document.querySelectorAll(".lang-inline button");
+    const panes = document.querySelectorAll(".pane");
+    function show(id) {
+      panes.forEach((p) => p.classList.toggle("active", p.id === id));
+      buttons.forEach((b) => b.setAttribute("aria-pressed", b.dataset.pane === id ? "true" : "false"));
+      document.documentElement.lang = id === "en" ? "en" : id === "zh-Hant" ? "zh-Hant" : "zh-CN";
+    }
+    buttons.forEach((b) => b.addEventListener("click", () => show(b.dataset.pane)));
+    const nav = (navigator.language || "").toLowerCase();
+    if (nav.includes("tw") || nav.includes("hk") || nav.includes("hant")) show("zh-Hant");
+    else if (nav.startsWith("zh")) show("zh-CN");
+    else if (nav.startsWith("en")) show("en");
+  </script>
+</body>
+</html>

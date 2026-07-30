@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-07-30",
+  "platforms": {
+    "ios": {
+      "store": "",
+      "direct": ""
+    },
+    "android": {
+      "store": "",
+      "direct": "downloads/LocalLink-1.0.0-release.apk"
+    },
+    "mac": {
+      "store": "",
+      "direct": ""
+    },
+    "windows": {
+      "store": "",
+      "direct": ""
+    }
+  },
+  "privacy": "privacy.html"
+}
