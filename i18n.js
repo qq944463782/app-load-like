@@ -18,15 +18,18 @@ const I18N = {
     feat3Title: "隐私本地",
     feat3Body: "聊天与文件走设备间直连，不上云、不留档。",
     iosName: "iPhone / iPad",
-    iosDesc: "App Store",
+    iosDesc: "IPA 安装包",
     androidName: "Android",
     androidDesc: "Google Play 或安装包",
     macName: "macOS",
-    macDesc: "Mac App Store / DMG",
+    macDesc: "ARM64 / Intel / Universal",
     winName: "Windows",
     winDesc: "安装包 / Microsoft Store",
     storeBtn: "前往商店",
     directBtn: "下载安装包",
+    macArm64Btn: "下载 ARM64 (Apple Silicon)",
+    macX64Btn: "下载 Intel (x64)",
+    macUniversalBtn: "下载 Universal",
     soon: "即将上线",
     versionLabel: "当前版本",
     footerCopy: "© LocalLink · wbox.top",
@@ -52,15 +55,18 @@ const I18N = {
     feat3Title: "隱私本機",
     feat3Body: "聊天與檔案走裝置間直連，不上雲、不留檔。",
     iosName: "iPhone / iPad",
-    iosDesc: "App Store",
+    iosDesc: "IPA 安裝包",
     androidName: "Android",
     androidDesc: "Google Play 或安裝包",
     macName: "macOS",
-    macDesc: "Mac App Store / DMG",
+    macDesc: "ARM64 / Intel / Universal",
     winName: "Windows",
     winDesc: "安裝包 / Microsoft Store",
     storeBtn: "前往商店",
     directBtn: "下載安裝包",
+    macArm64Btn: "下載 ARM64 (Apple Silicon)",
+    macX64Btn: "下載 Intel (x64)",
+    macUniversalBtn: "下載 Universal",
     soon: "即將上線",
     versionLabel: "目前版本",
     footerCopy: "© LocalLink · wbox.top",
@@ -86,15 +92,18 @@ const I18N = {
     feat3Title: "Private by design",
     feat3Body: "Chats and files stay on-device links — no cloud upload from us.",
     iosName: "iPhone / iPad",
-    iosDesc: "App Store",
+    iosDesc: "IPA package",
     androidName: "Android",
     androidDesc: "Google Play or APK",
     macName: "macOS",
-    macDesc: "Mac App Store / DMG",
+    macDesc: "ARM64 / Intel / Universal",
     winName: "Windows",
     winDesc: "Installer / Microsoft Store",
     storeBtn: "Open store",
     directBtn: "Download package",
+    macArm64Btn: "Download ARM64 (Apple Silicon)",
+    macX64Btn: "Download Intel (x64)",
+    macUniversalBtn: "Download Universal",
     soon: "Coming soon",
     versionLabel: "Version",
     footerCopy: "© LocalLink · wbox.top",
@@ -148,11 +157,19 @@ async function loadDownloads() {
 function platformActions(cfg, t) {
   const store = cfg?.store?.trim();
   const direct = cfg?.direct?.trim();
+  const directs = Array.isArray(cfg?.directs) ? cfg.directs : [];
   const parts = [];
   if (store) {
     parts.push(`<a class="store" href="${store}" target="_blank" rel="noopener">${t.storeBtn}</a>`);
   }
-  if (direct) {
+  if (directs.length) {
+    for (const item of directs) {
+      const url = item?.url?.trim();
+      if (!url) continue;
+      const label = (item.labelKey && t[item.labelKey]) || item.label || t.directBtn;
+      parts.push(`<a class="direct" href="${url}" download>${label}</a>`);
+    }
+  } else if (direct) {
     parts.push(`<a class="direct" href="${direct}" download>${t.directBtn}</a>`);
   }
   if (!parts.length) {

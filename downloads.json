@@ -4,7 +4,7 @@
   "platforms": {
     "ios": {
       "store": "",
-      "direct": ""
+      "direct": "downloads/LocalLink-1.0.0-ios.ipa"
     },
     "android": {
       "store": "",
@@ -12,7 +12,20 @@
     },
     "mac": {
       "store": "",
-      "direct": ""
+      "directs": [
+        {
+          "labelKey": "macArm64Btn",
+          "url": "downloads/LocalLink-1.0.0-mac-arm64.zip"
+        },
+        {
+          "labelKey": "macX64Btn",
+          "url": "downloads/LocalLink-1.0.0-mac-x64.zip"
+        },
+        {
+          "labelKey": "macUniversalBtn",
+          "url": "downloads/LocalLink-1.0.0-mac-universal.zip"
+        }
+      ]
     },
     "windows": {
       "store": "",
