@@ -41,11 +41,6 @@
           "size": "65.7 MB"
         },
         {
-          "labelKey": "winMsiRarBtn",
-          "url": "downloads/LocalLink-1.0.0-win-x64.msi.rar",
-          "size": "65.3 MB"
-        },
-        {
           "labelKey": "winPortableRarBtn",
           "url": "downloads/LocalLink-1.0.0-win-portable.rar",
           "size": "9.1 MB"
