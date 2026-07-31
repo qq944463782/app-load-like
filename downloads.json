@@ -1,35 +1,56 @@
 {
   "version": "1.0.0",
-  "updated": "2026-07-30",
+  "updated": "2026-07-31",
   "platforms": {
     "ios": {
       "store": "",
-      "direct": "downloads/LocalLink-1.0.0-ios.ipa"
+      "direct": "downloads/LocalLink-1.0.0-ios.ipa",
+      "size": "9.7 MB"
     },
     "android": {
       "store": "",
-      "direct": "downloads/LocalLink-1.0.0-release.apk"
+      "direct": "downloads/LocalLink-1.0.0-release.apk",
+      "size": "11.0 MB"
     },
     "mac": {
       "store": "",
       "directs": [
         {
           "labelKey": "macArm64Btn",
-          "url": "downloads/LocalLink-1.0.0-mac-arm64.zip"
+          "url": "downloads/LocalLink-1.0.0-mac-arm64.zip",
+          "size": "8.7 MB"
         },
         {
           "labelKey": "macX64Btn",
-          "url": "downloads/LocalLink-1.0.0-mac-x64.zip"
+          "url": "downloads/LocalLink-1.0.0-mac-x64.zip",
+          "size": "8.8 MB"
         },
         {
           "labelKey": "macUniversalBtn",
-          "url": "downloads/LocalLink-1.0.0-mac-universal.zip"
+          "url": "downloads/LocalLink-1.0.0-mac-universal.zip",
+          "size": "10.5 MB"
         }
       ]
     },
     "windows": {
       "store": "",
-      "direct": ""
+      "directs": [
+        {
+          "labelKey": "winMsiBtn",
+          "url": "downloads/LocalLink-1.0.0-win-x64.msi",
+          "size": "65.7 MB"
+        },
+        {
+          "labelKey": "winMsiRarBtn",
+          "url": "downloads/LocalLink-1.0.0-win-x64.msi.rar",
+          "size": "65.3 MB"
+        },
+        {
+          "labelKey": "winPortableRarBtn",
+          "url": "downloads/LocalLink-1.0.0-win-portable.rar",
+          "size": "9.1 MB"
+        }
+      ]
     }
   },
   "privacy": "privacy.html"

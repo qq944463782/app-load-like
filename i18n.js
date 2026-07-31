@@ -24,12 +24,15 @@ const I18N = {
     macName: "macOS",
     macDesc: "ARM64 / Intel / Universal",
     winName: "Windows",
-    winDesc: "安装包 / Microsoft Store",
+    winDesc: "MSI / RAR / 便携版",
     storeBtn: "前往商店",
     directBtn: "下载安装包",
     macArm64Btn: "下载 ARM64 (Apple Silicon)",
     macX64Btn: "下载 Intel (x64)",
     macUniversalBtn: "下载 Universal",
+    winMsiBtn: "MSI 安装包",
+    winMsiRarBtn: "MSI 压缩包 (RAR)",
+    winPortableRarBtn: "便携版 (RAR)",
     soon: "即将上线",
     versionLabel: "当前版本",
     footerCopy: "© LocalLink · wbox.top",
@@ -61,12 +64,15 @@ const I18N = {
     macName: "macOS",
     macDesc: "ARM64 / Intel / Universal",
     winName: "Windows",
-    winDesc: "安裝包 / Microsoft Store",
+    winDesc: "MSI / RAR / 便攜版",
     storeBtn: "前往商店",
     directBtn: "下載安裝包",
     macArm64Btn: "下載 ARM64 (Apple Silicon)",
     macX64Btn: "下載 Intel (x64)",
     macUniversalBtn: "下載 Universal",
+    winMsiBtn: "MSI 安裝包",
+    winMsiRarBtn: "MSI 壓縮包 (RAR)",
+    winPortableRarBtn: "便攜版 (RAR)",
     soon: "即將上線",
     versionLabel: "目前版本",
     footerCopy: "© LocalLink · wbox.top",
@@ -98,12 +104,15 @@ const I18N = {
     macName: "macOS",
     macDesc: "ARM64 / Intel / Universal",
     winName: "Windows",
-    winDesc: "Installer / Microsoft Store",
+    winDesc: "MSI / RAR / Portable",
     storeBtn: "Open store",
     directBtn: "Download package",
     macArm64Btn: "Download ARM64 (Apple Silicon)",
     macX64Btn: "Download Intel (x64)",
     macUniversalBtn: "Download Universal",
+    winMsiBtn: "MSI installer",
+    winMsiRarBtn: "MSI archive (RAR)",
+    winPortableRarBtn: "Portable (RAR)",
     soon: "Coming soon",
     versionLabel: "Version",
     footerCopy: "© LocalLink · wbox.top",
@@ -154,6 +163,11 @@ async function loadDownloads() {
   }
 }
 
+function withSize(label, size) {
+  const s = (size || "").trim();
+  return s ? `${label} · ${s}` : label;
+}
+
 function platformActions(cfg, t) {
   const store = cfg?.store?.trim();
   const direct = cfg?.direct?.trim();
@@ -167,10 +181,10 @@ function platformActions(cfg, t) {
       const url = item?.url?.trim();
       if (!url) continue;
       const label = (item.labelKey && t[item.labelKey]) || item.label || t.directBtn;
-      parts.push(`<a class="direct" href="${url}" download>${label}</a>`);
+      parts.push(`<a class="direct" href="${url}" download>${withSize(label, item.size)}</a>`);
     }
   } else if (direct) {
-    parts.push(`<a class="direct" href="${direct}" download>${t.directBtn}</a>`);
+    parts.push(`<a class="direct" href="${direct}" download>${withSize(t.directBtn, cfg.size)}</a>`);
   }
   if (!parts.length) {
     parts.push(`<span class="soon">${t.soon}</span>`);
