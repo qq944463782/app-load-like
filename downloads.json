@@ -4,7 +4,7 @@
   "platforms": {
     "ios": {
       "store": "",
-      "direct": "downloads/LocalLink-1.0.0-ios.ipa",
+      "direct": "downloads/LocalLink-1.0.1-ios.ipa",
       "size": "9.7 MB"
     },
     "android": {
