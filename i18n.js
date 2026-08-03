@@ -27,7 +27,7 @@ const I18N = {
     winDesc: "MSI / 便携版",
     storeBtn: "前往商店",
     directBtn: "下载安装包",
-    macArm64Btn: "下载 ARM64 (Apple Silicon)",
+    macArm64Btn: "下载 ARM64 (M系CPU)",
     macX64Btn: "下载 Intel (x64)",
     macUniversalBtn: "下载 Universal",
     winMsiBtn: "MSI 安装包",
@@ -66,7 +66,7 @@ const I18N = {
     winDesc: "MSI / 便攜版",
     storeBtn: "前往商店",
     directBtn: "下載安裝包",
-    macArm64Btn: "下載 ARM64 (Apple Silicon)",
+    macArm64Btn: "下載 ARM64 (M系CPU)",
     macX64Btn: "下載 Intel (x64)",
     macUniversalBtn: "下載 Universal",
     winMsiBtn: "MSI 安裝包",
@@ -105,7 +105,7 @@ const I18N = {
     winDesc: "MSI / Portable",
     storeBtn: "Open store",
     directBtn: "Download package",
-    macArm64Btn: "Download ARM64 (Apple Silicon)",
+    macArm64Btn: "Download ARM64 (M系CPU)",
     macX64Btn: "Download Intel (x64)",
     macUniversalBtn: "Download Universal",
     winMsiBtn: "MSI installer",
@@ -160,9 +160,8 @@ async function loadDownloads() {
   }
 }
 
-function withSize(label, size) {
-  const s = (size || "").trim();
-  return s ? `${label} · ${s}` : label;
+function withSize(label, _size) {
+  return label;
 }
 
 function platformActions(cfg, t) {
