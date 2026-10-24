@@ -36,6 +36,7 @@ const I18N = {
     versionLabel: "当前版本",
     footerCopy: "© LocalLink · wbox.top",
     footerOfficial: "官网",
+    footerSupport: "支持",
     footerPrivacy: "隐私政策"
   },
   "zh-Hant": {
@@ -75,6 +76,7 @@ const I18N = {
     versionLabel: "目前版本",
     footerCopy: "© LocalLink · wbox.top",
     footerOfficial: "官網",
+    footerSupport: "支援",
     footerPrivacy: "隱私政策"
   },
   en: {
@@ -114,6 +116,7 @@ const I18N = {
     versionLabel: "Version",
     footerCopy: "© LocalLink · wbox.top",
     footerOfficial: "Website",
+    footerSupport: "Support",
     footerPrivacy: "Privacy"
   }
 };
