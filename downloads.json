@@ -1,11 +1,11 @@
 {
   "version": "1.0.2",
-  "updated": "2026-08-04",
+  "updated": "2026-11-10",
   "platforms": {
     "ios": {
-      "store": "",
-      "direct": "downloads/LocalLink-1.0.1-ios.ipa",
-      "size": "9.7 MB"
+      "store": "https://apps.apple.com/app/id6795966754",
+      "direct": "",
+      "size": ""
     },
     "android": {
       "store": "",
